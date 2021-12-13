@@ -4,8 +4,8 @@
   "author": "ZhenXin",
   "license": "GPL-3.0",
   "scripts": {
-    "dev": "vuepress dev qq",
-    "build": "vuepress build qq"
+    "dev:qq": "vuepress dev qq",
+    "build:qq": "vuepress build qq"
   },
   "devDependencies": {
     "vuepress": "^1.8.2",
