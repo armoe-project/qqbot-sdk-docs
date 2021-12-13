@@ -15,13 +15,13 @@ QQ官方机器人 SDK For Java
 
 <RecoDemo :collapse="true">
   <template slot="code-xml">
-    <<< @/docs/.vuepress/code/getting-started/pom.xml
+    <<< @/qq/.vuepress/code/getting-started/pom.xml
   </template>
   <template slot="code-gradle">
-    <<< @/docs/.vuepress/code/getting-started/build.groovy
+    <<< @/qq/.vuepress/code/getting-started/build.groovy
   </template>
   <template slot="code-gradle Kotlin DSL">
-    <<< @/docs/.vuepress/code/getting-started/build.kts
+    <<< @/qq/.vuepress/code/getting-started/build.kts
   </template>
 </RecoDemo>
 
@@ -29,9 +29,9 @@ QQ官方机器人 SDK For Java
 
 <RecoDemo :collapse="true">
   <template slot="code-java">
-    <<< @/docs/.vuepress/code/getting-started/Example.java
+    <<< @/qq/.vuepress/code/getting-started/Example.java
   </template>
   <template slot="code-kotlin">
-    <<< @/docs/.vuepress/code/getting-started/Example.kt
+    <<< @/qq/.vuepress/code/getting-started/Example.kt
   </template>
 </RecoDemo>
