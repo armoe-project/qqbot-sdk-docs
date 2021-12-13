@@ -1,0 +1,9 @@
+node_modules
+.idea
+.vscode
+*.iml
+yarn-error*
+pnpm-debug.log
+.temp
+.chche
+dist
