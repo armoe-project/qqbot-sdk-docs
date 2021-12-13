@@ -1,9 +1,9 @@
 const sidebar = require('./sidebar')
 module.exports = {
     noFoundPageByTencent: false,
-    docsRepo: 'xiaoye-bot/qq-official-bot-sdk',
-    docsDir: 'docs',
-    docsBranch: 'docs',
+    docsRepo: 'xiaoye-bot/sdk-docs',
+    docsDir: 'qq',
+    docsBranch: 'main',
     editLinks: true,
     record: '辽ICP备19016520号-3',
     recordLink: 'http://beian.miit.gov.cn/',

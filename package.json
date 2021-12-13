@@ -1,17 +1,17 @@
 {
-  "name": "qq-official-bot-sdk-docs",
+  "name": "@xiaoye-bot/sdk-docs",
   "version": "1.0.0",
   "author": "ZhenXin",
   "license": "GPL-3.0",
   "scripts": {
-    "dev": "vuepress dev docs",
-    "build": "vuepress build docs"
+    "dev": "vuepress dev qq",
+    "build": "vuepress build qq"
   },
   "devDependencies": {
     "vuepress": "^1.8.2",
     "vuepress-plugin-flexsearch-pro": "^1.0.3"
   },
-  "description": "QQ Official Bot SDK Docs",
+  "description": "Xiaoye Bot SDK Docs",
   "dependencies": {
     "@vuepress-reco/vuepress-plugin-extract-code": "^1.0.4",
     "moment": "^2.29.1",
