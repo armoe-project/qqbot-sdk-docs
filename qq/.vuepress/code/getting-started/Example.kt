@@ -1,20 +1,14 @@
-import me.zhenxin.qqbot.core.AccessInfo
-import me.zhenxin.qqbot.core.ApiManager
-import me.zhenxin.qqbot.core.BotCore
-import me.zhenxin.qqbot.core.EventHandler
-import me.zhenxin.qqbot.event.AtMessageEvent
-import me.zhenxin.qqbot.template.TextThumbnailTemplate
-
 fun main() {
     val accessInfo = AccessInfo().apply {
         botAppId = 0 // 管理端的BotAppId
         botToken = "" // 管理端的BotToken
-        useSandBoxMode = true // 使用沙盒模式
     }
     // 创建实例
     val bot = BotCore(accessInfo)
     // 获取API管理器
     val api = bot.apiManager
+    // 使用沙盒模式
+    bot.useSandBoxMode()
     // 注册AT消息相关事件
     bot.registerAtMessageEvent()
     // 设置事件处理器
@@ -24,25 +18,34 @@ fun main() {
 }
 
 // 自定义事件处理器 继承EventHandler
+@Logger
 class IEventHandler(private val api: ApiManager) : EventHandler() {
-
-    override fun onUserMessage(event: AtMessageEvent) {
+    override fun onAtMessage(event: AtMessageEvent) {
         val message = event.message
+        val guildId = message.guildId
         val channelId = message.channelId
         val content = message.content
         val messageId = message.id
-
-        if (content.contains("ping")) {
-            // 文本消息
-            api.messageApi
-                .sendTextMessage(channelId, "pong!", messageId)
-        } else if (content.contains("ark")) {
-            // 模板消息
-            val ark = TextThumbnailTemplate.builder()
-                .build()
-                .toMessageArk();
-            api.messageApi
-                .sendTemplateMessage(channelId, ark, messageId);
+        val author = message.author
+        super.onAtMessage(event)
+        try {
+            val args = content.split(" ")
+            val command = args[0]
+            when (command) {
+                "info" -> api.messageApi
+                    .sendTextMessage(channelId, JSONUtil.toJsonStr(message), messageId)
+                "ping" -> api.messageApi
+                    .sendTextMessage(channelId, "pong", messageId)
+                "ark" -> {
+                    val ark = TextThumbnailTemplate.builder()
+                        .build().toMessageArk()
+                    api.messageApi
+                        .sendTemplateMessage(channelId, ark, messageId)
+                }
+            }
+        } catch (e: ApiException) {
+            log.error { "消息处理发生异常: ${e.code} ${e.message}(${e.error})" }
+            api.messageApi.sendTextMessage(channelId, "消息处理失败: ${e.message}", messageId)
         }
     }
 }
