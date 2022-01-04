@@ -26,6 +26,12 @@ class Example {
 class IEventHandler extends EventHandler {
     private final ApiManager api;
 
+    // 处理错误
+    @Override
+    public void onError(Throwable t) {
+        log.error("发生错误: {}", t.getMessage());
+    }
+
     @Override
     public void onAtMessage(AtMessageEvent event) {
         Message message = event.getMessage();
