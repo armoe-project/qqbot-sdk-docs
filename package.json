@@ -17,5 +17,5 @@
     "moment": "^2.29.1",
     "vuepress-theme-reco": "^1.6.10"
   },
-  "packageManager": "pnpm@6.23.6"
+  "packageManager": "pnpm@6.24.4"
 }

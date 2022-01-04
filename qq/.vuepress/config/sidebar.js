@@ -20,6 +20,15 @@ module.exports = {
             ]
         },
         {
+            title: '事件',
+            collapsable: false,
+            children: [
+                '/v1/event/',
+                '/v1/event/list',
+                '/v1/event/handler',
+            ]
+        },
+        {
             title: '进阶',
             collapsable: false,
             children: [

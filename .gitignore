@@ -7,3 +7,4 @@ pnpm-debug.log
 .temp
 .chche
 dist
+package-lock.json

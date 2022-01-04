@@ -20,7 +20,7 @@ module.exports = {
       `
     ]
   ],
-  title: 'QQ Official Bot SDK 使用文档',
+  title: 'QQ Official Bot SDK',
   theme: 'reco',
   themeConfig,
   plugins: [
