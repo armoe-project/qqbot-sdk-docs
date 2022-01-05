@@ -28,5 +28,3 @@ MyEventHandler handler = new IEventHandler();
 // handler.setRemoveAt(false); // 取消删除消息中的艾特
 bot.setEventHandler(handler);
 ```
-
-

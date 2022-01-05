@@ -18,7 +18,10 @@ module.exports = {
                 '/v1/api/announces',
                 '/v1/api/member',
                 '/v1/api/user',
-
+                '/v1/api/mute',
+                '/v1/api/channel',
+                '/v1/api/permission',
+                '/v1/api/schedule',
             ]
         },
         {
