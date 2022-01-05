@@ -12,10 +12,12 @@ module.exports = {
             collapsable: false,
             children: [
                 '/v1/api/guild',
+                '/v1/api/audio',
                 '/v1/api/message',
                 '/v1/api/role',
                 '/v1/api/announces',
                 '/v1/api/member',
+                '/v1/api/user',
 
             ]
         },

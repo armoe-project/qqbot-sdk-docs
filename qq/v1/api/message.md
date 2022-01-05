@@ -4,7 +4,7 @@ author: 真心
 date: 2021-12-13
 ---
 
-## 发送文本消息
+## 发送消息
 
 ```java
 /**
@@ -15,12 +15,8 @@ date: 2021-12-13
 * @param messageId 消息ID
 * @return 消息对象
 */
-public Message sendTextMessage(String channelId, String content, String messageId)
-```
+public Message sendMessage(String channelId, String content, String messageId)
 
-## 发送图片消息
-
-```java
 /**
 * 发送图片消息
 *
@@ -29,12 +25,8 @@ public Message sendTextMessage(String channelId, String content, String messageI
 * @param messageId 消息ID
 * @return 消息对象
 */
-public Message sendImageMessage(String channelId, String image, String messageId)
-```
+public Message sendMessage(String channelId, URL image, String messageId)
 
-## 发送文本和图片消息
-
-```java
 /**
 * 发送文本和图片消息
 *
@@ -44,7 +36,7 @@ public Message sendImageMessage(String channelId, String image, String messageId
 * @param messageId 消息ID
 * @return 消息对象
 */
-public Message sendTextAndImageMessage(String channelId, String content, String image, String messageId)
+public Message sendMessage(String channelId, String content, URL image, String messageId)
 ```
 
 ## 发送模板消息
@@ -61,4 +53,27 @@ public Message sendTextAndImageMessage(String channelId, String content, String 
 * @return Message对象
 */
 public Message sendTemplateMessage(String channelId, MessageArk ark, String messageId)
+```
+
+## 发送嵌套消息
+```java
+/**
+ * 发送 Embed 消息
+ *
+ * @param channelId 子频道ID
+ * @param embed     Embed 消息
+ * @param messageId 消息ID
+ * @return 消息对象
+ */
+public Message sendMessage(String channelId, MessageEmbed embed, String messageId) throws ApiException
+```
+
+## 撤回消息
+```java
+/**
+ * 撤回消息
+ * @param channelId 子频道ID
+ * @param messageId 消息ID
+ */
+public void deleteMessage(String channelId, String messageId) throws ApiException
 ```
