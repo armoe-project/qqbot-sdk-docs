@@ -8,7 +8,7 @@
     "build:qq": "vuepress build qq"
   },
   "devDependencies": {
-    "vuepress": "^1.8.2",
+    "vuepress": "^1.9.5",
     "vuepress-plugin-flexsearch-pro": "^1.0.3"
   },
   "description": "Xiaoye Bot SDK Docs",
