@@ -39,8 +39,11 @@ class IEventHandler(private val api: ApiManager) : EventHandler() {
             val args = content.split(" ")
             val command = args[0]
             when (command) {
-                "ping" -> api.messageApi
-                    .sendMessage(channelId, "pong", messageId)
+                "ping" -> api.messageApi.sendMessage(
+                    channelId,
+                    "pong",
+                    messageId
+                )
             }
         } catch (e: ApiException) {
             log.error { "消息处理发生异常: ${e.code} ${e.message}(${e.error})" }

@@ -1,0 +1,1 @@
+libraryDependencies += "me.zhenxin" % "qqbot-sdk" % version

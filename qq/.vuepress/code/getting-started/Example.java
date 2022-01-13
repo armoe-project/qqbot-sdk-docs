@@ -46,8 +46,11 @@ class IEventHandler extends EventHandler {
             String command = args[0];
             switch (command) {
                 case "ping":
-                    api.getMessageApi()
-                            .sendMessage(channelId, "pong", messageId);
+                    api.getMessageApi().sendMessage(
+                        channelId,
+                        "pong",
+                        messageId
+                    );
                     break;
             }
         } catch (ApiException e) {

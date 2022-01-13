@@ -23,6 +23,9 @@ QQ官方机器人 SDK For Java
   <template slot="code-gradle Kotlin DSL">
     <<< @/qq/.vuepress/code/getting-started/build.kts
   </template>
+  <template slot="code-sbt">
+    <<< @/qq/.vuepress/code/getting-started/build.scala
+  </template>
 </RecoDemo>
 
 ## 使用
@@ -33,5 +36,8 @@ QQ官方机器人 SDK For Java
   </template>
   <template slot="code-kotlin">
     <<< @/qq/.vuepress/code/getting-started/Example.kt
+  </template>
+  <template slot="code-scala">
+    <<< @/qq/.vuepress/code/getting-started/Example.scala
   </template>
 </RecoDemo>
