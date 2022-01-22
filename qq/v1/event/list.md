@@ -7,6 +7,9 @@ date: 2021-12-31
 ### 消息
 * 用户消息: `UserMessageEvent` (仅限[私域机器人][私域]可用)
 * 艾特消息: `AtMessageEvent`
+* 私信消息: `DirectMessageEvent`
+* 消息审核通过: `MessageAuditPassEvent`
+* 消息审核不通过: `MessageAuditRejectEvent`
 
 ### 子频道
 * 子频道创建: `ChannelCreateEvent`

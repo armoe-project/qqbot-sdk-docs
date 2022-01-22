@@ -14,6 +14,7 @@ module.exports = {
                 '/v1/api/guild',
                 '/v1/api/audio',
                 '/v1/api/message',
+                '/v1/api/dmessage',
                 '/v1/api/role',
                 '/v1/api/announces',
                 '/v1/api/member',

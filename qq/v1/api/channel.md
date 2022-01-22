@@ -33,7 +33,7 @@ public List<Channel> getChannelList(String guildId)
  *
  * @param guildId  频道ID
  * @param name     子频道名称
- * @param type     子频道类型 (<a href="https://bot.q.qq.com/wiki/develop/api/openapi/channel/model.html#c
+ * @param type     子频道类型
  * @param position 子频道排序
  * @param parentId 分组ID
  * @return 子频道对象
